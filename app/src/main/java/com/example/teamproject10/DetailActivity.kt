@@ -24,7 +24,7 @@ class DetailActivity : AppCompatActivity() {
 
         //아래는 TestCode 데이타 활용
         Log.d(TAG, getString(detail.profile.nameRes))
-        findViewById<ImageView>(R.id.testImg).setImageResource(detail.profile.image)
+        findViewById<ImageView>(R.id.testImg).setImageResource(detail.detailList[0].image)
         Log.d(TAG, detail.toString())
     }
 }

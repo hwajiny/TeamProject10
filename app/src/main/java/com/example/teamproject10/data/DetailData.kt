@@ -27,37 +27,37 @@ data class FeedData(var image: Int, var feedDescription: Int, var comment: Int):
  * 아래는 데이타 입니다.
  */
 
-val mockProfile1 = ProfileData(R.string.str_jisu_id, R.string.str_jisu_name, R.string.str_jisu_des, R.string.str_jisu_mbti, R.drawable.ic_jisu)
-val mockFeed1 = ArrayList<FeedData>().apply {
+val jisuProfile = ProfileData(R.string.str_jisu_id, R.string.str_jisu_name, R.string.str_jisu_des, R.string.str_jisu_mbti, R.drawable.ic_jisu)
+val jisuFeed = ArrayList<FeedData>().apply {
     add(FeedData(R.drawable.jisufeed, R.string.str_jisu_feed, R.string.str_jisu_comment))
     add(FeedData(R.drawable.jisufeed, R.string.str_jisu_feed, R.string.str_jisu_comment))
     add(FeedData(R.drawable.jisufeed, R.string.str_jisu_feed, R.string.str_jisu_comment))
 }
 
-val mockProfile2 = ProfileData(R.string.str_jenny_id, R.string.str_jenny_name, R.string.str_jenny_des, R.string.str_jenny_mbti, R.drawable.ic_jenny)
-val mockFeed2 = ArrayList<FeedData>().apply {
+val jennyProfile = ProfileData(R.string.str_jenny_id, R.string.str_jenny_name, R.string.str_jenny_des, R.string.str_jenny_mbti, R.drawable.ic_jenny)
+val jennyFeed = ArrayList<FeedData>().apply {
     add(FeedData(R.drawable.jennyfeed, R.string.str_jenny_feed, R.string.str_jenny_comment))
     add(FeedData(R.drawable.jennyfeed, R.string.str_jenny_feed, R.string.str_jenny_comment))
     add(FeedData(R.drawable.jennyfeed, R.string.str_jenny_feed, R.string.str_jenny_comment))
 }
 
-val mockProfile3 = ProfileData(R.string.str_rose_id, R.string.str_rose_name, R.string.str_rose_des, R.string.str_rose_mbti, R.drawable.ic_rose)
-val mockFeed3 = ArrayList<FeedData>().apply {
+val roseProfile = ProfileData(R.string.str_rose_id, R.string.str_rose_name, R.string.str_rose_des, R.string.str_rose_mbti, R.drawable.ic_rose)
+val roseFeed = ArrayList<FeedData>().apply {
     add(FeedData(R.drawable.rosefeed, R.string.str_rose_feed, R.string.str_rose_comment))
     add(FeedData(R.drawable.rosefeed, R.string.str_rose_feed, R.string.str_rose_comment))
     add(FeedData(R.drawable.rosefeed, R.string.str_rose_feed, R.string.str_rose_comment))
 }
 
-val mockProfile4 = ProfileData(R.string.str_lisa_id, R.string.str_lisa_name, R.string.str_lisa_des, R.string.str_lisa_des, R.drawable.ic_lisa)
-val mockFeed4 = ArrayList<FeedData>().apply {
+val lisaProfile = ProfileData(R.string.str_lisa_id, R.string.str_lisa_name, R.string.str_lisa_des, R.string.str_lisa_des, R.drawable.ic_lisa)
+val lisaFeed = ArrayList<FeedData>().apply {
     add(FeedData(R.drawable.lisafeed, R.string.str_lisa_feed, R.string.str_lisa_comment))
     add(FeedData(R.drawable.lisafeed, R.string.str_lisa_feed, R.string.str_lisa_comment))
     add(FeedData(R.drawable.lisafeed, R.string.str_lisa_feed, R.string.str_lisa_comment))
 }
 
 var mainDataList = ArrayList<DetailData>().apply {
-    add(DetailData(mockProfile1, mockFeed1))
-    add(DetailData(mockProfile2, mockFeed2))
-    add(DetailData(mockProfile3, mockFeed3))
-    add(DetailData(mockProfile4, mockFeed4))
+    add(DetailData(jisuProfile, jisuFeed))
+    add(DetailData(jennyProfile, jennyFeed))
+    add(DetailData(roseProfile, roseFeed))
+    add(DetailData(lisaProfile, lisaFeed))
 }
