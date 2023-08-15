@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Blink</string>
+    <string name="str_jisu_id" translatable="false">blackpinkjisu</string>
+    <string name="str_jisu_name" translatable="false">Jisu</string>
+    <string name="str_jisu_des" translatable="false">Lead Vocalist</string>
+    <string name="str_jisu_mbti" translatable="false">ESTJ</string>
+    <string name="str_jisu_feed" translatable="false">Departed to France for Paris Fashion Week schedule</string>
+
+
+    <string name="str_jisu_comment" translatable="false">Comment from Jisu: TEST</string>
+
+    <string name="str_jenny_id" translatable="false">blackpinkjenny</string>
+    <string name="str_jenny_name" translatable="false">Jenny</string>
+    <string name="str_jenny_des" translatable="false">Main Rapper</string>
+    <string name="str_jenny_mbti" translatable="false">INFP</string>
+    <string name="str_jenny_feed" translatable="false">Wearing a mini black dress in Cannes</string>
+
+
+    <string name="str_jenny_comment" translatable="false">Comment from Jenny: TEST</string>
+
+    <string name="str_rose_id" translatable="false">blackpinkrose</string>
+    <string name="str_rose_name" translatable="false">Rosé</string>
+    <string name="str_rose_des" translatable="false">Main Vocalist</string>
+    <string name="str_rose_mbti" translatable="false">ENFP</string>
+    <string name="str_rose_feed" translatable="false">Enjoying the festival on a sunny day</string>
+
+
+    <string name="str_rose_comment" translatable="false">Comment from Rose: TEST</string>
+
+    <string name="str_lisa_id" translatable="false">blackpinklisa</string>
+    <string name="str_lisa_name" translatable="false">Lisa</string>
+    <string name="str_lisa_des" translatable="false">Main Dancer</string>
+    <string name="str_lisa_mbti" translatable="false">ESFJ</string>
+    <string name="str_lisa_feed" translatable="false">Had an unforgettable night in Venice with amazing people</string>
+
+    <string name="str_lisa_comment" translatable="false">Comment from Lisa: TEST</string>
+
+    <string name="str_no_data" translatable="false">No data available.</string>
+
+</resources>
