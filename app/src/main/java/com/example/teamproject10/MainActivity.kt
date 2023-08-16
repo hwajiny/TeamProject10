@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.teamproject10.data.UserData
 import com.example.teamproject10.data.mainDataList
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -32,13 +33,8 @@ class MainActivity : AppCompatActivity() {
             }
             startForMypage.launch(i)
         }
-        //로그인 여부 체크 후 문구 반영
-//        val loginCheck = findViewById<TextView>(R.id.login_check)
-//        if (isLoggedIn) {
-//            textView.text = getString(R.string.str_login)
-//        } else {
-//            textView.text = getString(R.string.str_not_login)
-//        }
+
+        checkLogin()
 
         //플로팅 버튼을 누르면 플로팅 화면을 호출하는 코드
         val btnFloating = findViewById<FloatingActionButton>(R.id.btn_floating)
@@ -114,6 +110,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun checkLogin() {
+        // 로그인 여부 체크 후 문구 반영
+        val loginCheck = findViewById<TextView>(R.id.login_check)
+        if (UserData.id.isNotEmpty()) {
+            loginCheck.text = getString(R.string.str_login)
+        } else {
+            loginCheck.text = getString(R.string.str_not_login)
+        }
+        loginCheck.setOnClickListener {
+            //로그인 상태라면 마이페이지 or 로그인상태가 아니라면 로그인페이지
+            if (UserData.id.isNotEmpty()) {
+                val i = Intent(this, MyPageActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                }
+                startForMypage.launch(i)
+
+            } else {
+                val i = Intent(this, LoginActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                }
+                startForLogin.launch(i)
+            }
+
+        }
+    }
+
     /**
      * registerForActivityResult 로그인페이지 호출 후 setResult호출 시 콜백을 받는다
      */
@@ -121,6 +143,8 @@ class MainActivity : AppCompatActivity() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val intent = result.data
+                checkLogin()
+
                 Log.d(TAG, "startForLoginResult")
             }
         }
@@ -155,4 +179,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        UserData.id = ""
+        UserData.pw = ""
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.teamproject10
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.teamproject10.data.UserData
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var resultLauncher: ActivityResultLauncher<Intent>
@@ -25,9 +27,17 @@ class LoginActivity : AppCompatActivity() {
 
             if (id.isNotEmpty() && pw.isNotEmpty()) {
                 val intent = Intent(this,MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 intent.putExtra("Id",id)
-                startActivity(intent)
+//                startActivity(intent) //이거하믄 새로 만듬
+                setResult(Activity.RESULT_OK, intent)
                 Toast.makeText(applicationContext,"로그인 성공",Toast.LENGTH_SHORT).show()
+                //가입한 회원정보와 일치하면 정보를 맴버객체에 담아주고 메인으로 이동시켜야 한다.
+                //지금은 임시로 무조건 이동
+                UserData.id = id
+                UserData.pw = pw
+
+                finish()
            } else{
                Toast.makeText(applicationContext,"아이디/비밀번호를 확인해주세요.",Toast.LENGTH_SHORT).show()
            }
