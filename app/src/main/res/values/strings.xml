@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Blink</string>
+
+    <!-- -->
+    <string name="str_jisu_id" translatable="false">blackpinkjisu</string>
+    <string name="str_jisu_name" translatable="false">지수</string>
+    <string name="str_jisu_des" translatable="false">리드보컬</string>
+    <string name="str_jisu_mbti" translatable="false">ESTJ</string>
+    <string name="str_jisu_feed" translatable="false">파리패션위크 일정을 위해 프랑스로 출국</string>
+
+    <string name="str_jisu_comment" translatable="false">코멘트 지수 TEST</string>
+
+    <string name="str_jenny_id" translatable="false">blackpinkjenny</string>
+    <string name="str_jenny_name" translatable="false">제니</string>
+    <string name="str_jenny_des" translatable="false">메인래퍼</string>
+    <string name="str_jenny_mbti" translatable="false">INFP</string>
+    <string name="str_jenny_feed" translatable="false">칸에서 미니 블랙 드레스를 입은 나1</string>
+
+    <string name="str_jenny_comment" translatable="false">코멘트 제니 TEST</string>
+
+    <string name="str_rose_id" translatable="false">blackpinkrese</string>
+    <string name="str_rose_name" translatable="false">로제</string>
+    <string name="str_rose_des" translatable="false">메인보컬</string>
+    <string name="str_rose_mbti" translatable="false">ENFP</string>
+    <string name="str_rose_feed" translatable="false">날도 좋고 신난다 페스티벌</string>
+
+    <string name="str_rose_comment" translatable="false">코멘트 로제 TEST</string>
+
+    <string name="str_lisa_id" translatable="false">blackpinklisa</string>
+    <string name="str_lisa_name" translatable="false">리사</string>
+    <string name="str_lisa_des" translatable="false">메인댄서</string>
+    <string name="str_lisa_mbti" translatable="false">ESFJ</string>
+    <string name="str_lisa_feed" translatable="false">베니스에서 대단한 사람들과 얼마나 잊지 못할 밤을 보냈는지"(What an unforgettable night in Venice with these wonderful people)</string>
+
+    <string name="str_lisa_comment" translatable="false">코멘트 리사 TEST</string>
+
+    <string name="str_no_data" translatable="false">데이타가 없습니다.</string>
+</resources>
