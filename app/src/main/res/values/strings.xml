@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Blink</string>
-
+    <string name="str_not_login" translatable="false">로그인 해주세요</string>
+    <string name="str_login" translatable="false">환영합니다</string>
     <!-- -->
     <string name="str_jisu_id" translatable="false">blackpinkjisu</string>
     <string name="str_jisu_name" translatable="false">지수</string>

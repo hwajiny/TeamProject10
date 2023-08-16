@@ -32,6 +32,13 @@ class MainActivity : AppCompatActivity() {
             }
             startForMypage.launch(i)
         }
+        //로그인 여부 체크 후 문구 반영
+//        val loginCheck = findViewById<TextView>(R.id.login_check)
+//        if (isLoggedIn) {
+//            textView.text = getString(R.string.str_login)
+//        } else {
+//            textView.text = getString(R.string.str_not_login)
+//        }
 
         //플로팅 버튼을 누르면 플로팅 화면을 호출하는 코드
         val btnFloating = findViewById<FloatingActionButton>(R.id.btn_floating)
@@ -49,14 +56,35 @@ class MainActivity : AppCompatActivity() {
      */
     private fun initDataAndEvent() {
         //layout_content 레이아웃을 가져와서 linearLayout 변수를 하나 선언해서 넣어준다.
+        val horizontalLayout = findViewById<LinearLayout>(R.id.horizontal_layout)
+        //layout_content 레이아웃을 가져와서 linearLayout 변수를 하나 선언해서 넣어준다.
         val linearLayout = findViewById<LinearLayout>(R.id.layout_content)
         //XML레이아웃코드를 직접(코드) 사용하기 위해 객체화하는 과정
         val inflater = LayoutInflater.from(this)
 
         //아래 forEach문을통해서 피드데이타 갯수만큼 반복하면서 addView를 통해서 뷰를 붙여준다.
         mainDataList.forEach { detailData ->
-            //반복해서 사용하는 layout_feeditem 레이아웃을 직접 가져와서 변수에 할당한다.
-            val layoutMainFeedItem = inflater.inflate(R.layout.include_layout_feeditem, linearLayout, false) as ViewGroup
+            /* 가로 프로필 이미지 구역 */
+            //반복해서 사용하는 layout_feeditem 레이아웃을 객체로 생성해서 변수에 할당한다.
+            val layoutHorizontalFeedIcon =
+                inflater.inflate(R.layout.include_layout_feedicon, horizontalLayout, false)
+            val icon1 = layoutHorizontalFeedIcon.findViewById<ImageView>(R.id.img_horizon1)
+            icon1.setImageResource(detailData.profile.image)
+            //그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
+            horizontalLayout.addView(layoutHorizontalFeedIcon)
+
+            layoutHorizontalFeedIcon.setOnClickListener {
+                val i = Intent(this, DetailActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    putExtra("DATA", detailData)
+                }
+                startForDetail.launch(i)
+            }
+
+            /* 세로 피드 구역 */
+            //반복해서 사용하는 layout_feeditem 레이아웃을 객체로 생성해서 변수에 할당한다.
+            val layoutMainFeedItem =
+                inflater.inflate(R.layout.include_layout_feeditem, linearLayout, false) as ViewGroup
             //위에서 가져온 레이아웃에 아래 위젯을 각각 찾아서 변수 할당 하고
             val imgIcon = layoutMainFeedItem.findViewById<ImageView>(R.id.img_icon_feed1)
             val tvIcon = layoutMainFeedItem.findViewById<TextView>(R.id.id_feed1)
@@ -87,13 +115,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
+     * registerForActivityResult 로그인페이지 호출 후 setResult호출 시 콜백을 받는다
+     */
+    private val startForLogin =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val intent = result.data
+                Log.d(TAG, "startForLoginResult")
+            }
+        }
+
+    /**
      * registerForActivityResult 마이페이지 호출 후 setResult호출 시 콜백을 받는다
      */
     private val startForMypage =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val intent = result.data
-                Log.d(TAG, "startForLoginResult")
             }
         }
 
@@ -104,7 +142,6 @@ class MainActivity : AppCompatActivity() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val intent = result.data
-                Log.d(TAG, "startForDetailResult")
             }
         }
 
@@ -115,7 +152,6 @@ class MainActivity : AppCompatActivity() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val intent = result.data
-                Log.d(TAG, "startForFloatingResult")
             }
         }
 

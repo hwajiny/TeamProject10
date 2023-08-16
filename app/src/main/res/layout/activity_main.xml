@@ -44,12 +44,10 @@
         app:srcCompat="@drawable/a" />
 
     <TextView
-        android:id="@+id/id_title"
+        android:id="@+id/login_check"
         android:layout_width="53dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/icon_title"
         app:layout_constraintEnd_toStartOf="@+id/img_login_main"
         app:layout_constraintHorizontal_bias="0.792"
@@ -64,42 +62,15 @@
         app:layout_constraintTop_toBottomOf="@id/img_login_main"
         app:layout_constraintVertical_weight="1">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
+            android:id="@+id/horizontal_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp">
 
-            <ImageView
-                android:id="@+id/img_horizon1"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/ic_jenny" />
-
-            <ImageView
-                android:id="@+id/img_horizon2"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                app:srcCompat="@drawable/ic_jisu" />
-
-            <ImageView
-                android:id="@+id/img_horizon3"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                app:srcCompat="@drawable/ic_rose" />
-
-            <ImageView
-                android:id="@+id/img_horizon4"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/ic_lisa" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
     </HorizontalScrollView>
 
     <androidx.core.widget.NestedScrollView
