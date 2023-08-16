@@ -33,6 +33,7 @@
     <string name="str_lisa_feed" translatable="false">베니스에서 대단한 사람들과 얼마나 잊지 못할 밤을 보냈는지"(What an unforgettable night in Venice with these wonderful people)</string>
 
     <string name="str_lisa_comment" translatable="false">코멘트 리사 TEST</string>
+    <string name="my_page" translatable="false">이름: 김지수\n 생일:1월3일\nmbti:ISTP\n소속사:YG</string>
 
     <string name="str_no_data" translatable="false">데이타가 없습니다.</string>
 </resources>
