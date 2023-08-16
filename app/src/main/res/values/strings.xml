@@ -35,4 +35,8 @@
     <string name="str_lisa_comment" translatable="false">코멘트 리사 TEST</string>
 
     <string name="str_no_data" translatable="false">데이타가 없습니다.</string>
+
+    <string name="name" translatable="false">아이디 : 블랙핑크_제니\n나이 : 27\nMBTI : INFP </string>
+    <string name="age" translatable="false">나이 : 21 </string>
+
 </resources>

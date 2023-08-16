@@ -2,12 +2,10 @@ package com.example.teamproject10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.ImageView
 import android.widget.Toast
 import com.example.teamproject10.data.DetailData
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivityJE : AppCompatActivity() {
     private val TAG: String = this::class.java.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,9 +20,6 @@ class DetailActivity : AppCompatActivity() {
             return
         }
 
-        //아래는 TestCode 데이타 활용
-        Log.d(TAG, getString(detail.profile.nameRes))
-        findViewById<ImageView>(R.id.testImg).setImageResource(detail.detailList[0].image)
-        Log.d(TAG, detail.toString())
+
     }
 }

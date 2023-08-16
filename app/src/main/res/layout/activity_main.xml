@@ -107,14 +107,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icHScrollView">
+        app:layout_constraintTop_toBottomOf="@id/icHScrollView"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="132dp">
 
         <!-- 스크롤뷰는 꼭 리니어레이아웃을 추가하고 시작 -->
         <LinearLayout
             android:id="@+id/layout_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"/>
+            android:orientation="vertical" />
 
     </androidx.core.widget.NestedScrollView>
 
