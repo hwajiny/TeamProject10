@@ -80,35 +80,37 @@ class MainActivity : AppCompatActivity() {
             }
 
             /* 세로 피드 구역 */
-            //반복해서 사용하는 layout_feeditem 레이아웃을 객체로 생성해서 변수에 할당한다.
-            val layoutMainFeedItem =
-                inflater.inflate(R.layout.include_layout_feeditem, linearLayout, false) as ViewGroup
-            //위에서 가져온 레이아웃에 아래 위젯을 각각 찾아서 변수 할당 하고
-            val imgIcon = layoutMainFeedItem.findViewById<ImageView>(R.id.img_icon_feed1)
-            val tvIcon = layoutMainFeedItem.findViewById<TextView>(R.id.id_feed1)
-            val imgFeed = layoutMainFeedItem.findViewById<ImageView>(R.id.img_feed1)
-            val tvFeed = layoutMainFeedItem.findViewById<TextView>(R.id.feed1_textView)
-            val idComment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment_id)
-            val comment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment)
+            detailData.detailList.forEach { feedData ->
+                //반복해서 사용하는 layout_feeditem 레이아웃을 객체로 생성해서 변수에 할당한다.
+                val layoutMainFeedItem =
+                    inflater.inflate(R.layout.include_layout_feeditem, linearLayout, false) as ViewGroup
+                //위에서 가져온 레이아웃에 아래 위젯을 각각 찾아서 변수 할당 하고
+                val imgIcon = layoutMainFeedItem.findViewById<ImageView>(R.id.img_icon_feed1)
+                val tvIcon = layoutMainFeedItem.findViewById<TextView>(R.id.id_feed1)
+                val imgFeed = layoutMainFeedItem.findViewById<ImageView>(R.id.img_feed1)
+                val tvFeed = layoutMainFeedItem.findViewById<TextView>(R.id.feed1_textView)
+                val idComment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment_id)
+                val comment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment)
 
-            //데이타를 넣어준다.
-            imgIcon.setImageResource(detailData.profile.image)
-            tvIcon.setText(detailData.profile.id)
-            imgFeed.setImageResource(detailData.detailList[0].image)
-            tvFeed.setText(detailData.detailList[0].feedDescription)
-            idComment.setText(detailData.profile.id)
-            comment.setText(detailData.detailList[0].comment)
+                //데이타를 넣어준다.
+                imgIcon.setImageResource(detailData.profile.image)
+                tvIcon.setText(detailData.profile.id)
+                imgFeed.setImageResource(feedData.image)
+                tvFeed.setText(feedData.feedDescription)
+                idComment.setText(detailData.profile.id)
+                comment.setText(feedData.comment)
 
-            //그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
-            linearLayout.addView(layoutMainFeedItem)
+                //그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
+                linearLayout.addView(layoutMainFeedItem)
 
-            layoutMainFeedItem.setOnClickListener {
-                val i = Intent(this, DetailActivityJE::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                    putExtra("DATA", detailData)
+                layoutMainFeedItem.setOnClickListener {
+                    val i = Intent(this, DetailActivityJE::class.java).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                        putExtra("DATA", detailData)
+                    }
+                    startForDetail.launch(i)
+                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
                 }
-                startForDetail.launch(i)
-                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
             }
         }
     }
