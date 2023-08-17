@@ -46,4 +46,11 @@
     <string name="my_page" translatable="false">이름: 김지수\n 생일:1월3일\nmbti:ISTP\n소속사:YG</string>
 
     <string name="str_no_data" translatable="false">데이타가 없습니다.</string>
+
+    <string name="name" translatable="false">아이디 : 블랙핑크_제니\n나이 : 27\nMBTI : INFP </string>
+    <string name="nameJ" translatable="false">아이디 : 블랙핑크_지수\n나이 : 28\nMBTI : ISTP </string>
+    <string name="nameR" translatable="false">아이디 : 블랙핑크_리사\n나이 : 26\nMBTI : ESFJ </string>
+    <string name="nameRR" translatable="false">아이디 : 블랙핑크_로제\n나이 : 26\nMBTI : ENFP </string>
+    <string name="age" translatable="false">나이 : 21 </string>
+
 </resources>
