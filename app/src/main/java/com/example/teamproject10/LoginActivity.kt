@@ -30,12 +30,14 @@ class LoginActivity : AppCompatActivity() {
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 intent.putExtra("Id",id)
 //                startActivity(intent) //이거하믄 새로 만듬
-                setResult(Activity.RESULT_OK, intent)
-                Toast.makeText(applicationContext,"로그인 성공",Toast.LENGTH_SHORT).show()
+
                 //가입한 회원정보와 일치하면 정보를 맴버객체에 담아주고 메인으로 이동시켜야 한다.
                 //지금은 임시로 무조건 이동
                 UserData.id = id
                 UserData.pw = pw
+                setResult(Activity.RESULT_OK, intent)
+
+                Toast.makeText(applicationContext,"로그인 성공",Toast.LENGTH_SHORT).show()
 
                 finish()
            } else{

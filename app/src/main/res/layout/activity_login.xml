@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    >
+        >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="30dp"
-    android:background="@color/black">
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -25,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="아이디"
-        android:textColor="@color/white"
         android:layout_gravity="left"
         android:textStyle="bold"
 
@@ -37,15 +35,12 @@
         android:layout_height="wrap_content"
         android:hint="아이디를 입력하세요."
         android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
         android:textStyle="italic" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="비밀번호"
-        android:textColor="@color/white"
         android:layout_gravity="left"
         android:layout_marginTop="30dp"
         android:textStyle="bold"
@@ -56,8 +51,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호를 입력하세요."
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:layout_marginBottom="30dp"
         android:textStyle="italic"
         android:inputType="textPassword"/>
