@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                 addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
             startForMypage.launch(i)
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         }
 
         checkLogin()
@@ -75,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                     putExtra("DATA", detailData)
                 }
                 startForDetail.launch(i)
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
             }
 
             /* 세로 피드 구역 */
@@ -106,6 +108,7 @@ class MainActivity : AppCompatActivity() {
                     putExtra("DATA", detailData)
                 }
                 startForDetail.launch(i)
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
             }
         }
     }

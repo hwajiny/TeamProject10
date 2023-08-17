@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Blink</string>
-    <string name="str_jisu_id" translatable="false">blackpinkjisu</string>
+    <string name="str_jisu_id" translatable="false">Blackpinkjisu</string>
     <string name="str_jisu_name" translatable="false">Jisu</string>
     <string name="str_jisu_des" translatable="false">Lead Vocalist</string>
     <string name="str_jisu_mbti" translatable="false">ESTJ</string>
-    <string name="str_jisu_feed" translatable="false">Departed to France for Paris Fashion Week schedule</string>
+    <string name="str_jisu_coachella" translatable="false">We are here at the world largest music festival "\'Coachella Festival\'" held in North America!!</string>
+    <string name="str_jisu_feed1" translatable="false">Did everyone enjoy watching Inkigayo yesterday?? I was so overwhelmed and happy to hear that the title song "\'Flower\'" from my first solo album won first place last week.</string>
+    <string name="str_jisu_feed2" translatable="false">The weather here is a bit chilly. It must be hot in Korea, right? I already miss my homeland</string>
 
 
     <string name="str_jisu_comment" translatable="false">Comment from Jisu: TEST</string>
 
-    <string name="str_jenny_id" translatable="false">blackpinkjenny</string>
+    <string name="str_jenny_id" translatable="false">Blackpinkjenny</string>
     <string name="str_jenny_name" translatable="false">Jenny</string>
     <string name="str_jenny_des" translatable="false">Main Rapper</string>
     <string name="str_jenny_mbti" translatable="false">INFP</string>
-    <string name="str_jenny_feed" translatable="false">Wearing a mini black dress in Cannes</string>
+    <string name="str_jenny_feed1" translatable="false">It was a very happy, joyful and grateful day💜 Thank you and love you Blink, who always gives us happiness.</string>
+    <string name="str_jenny_feed2" translatable="false">Calvin Klein photo shoot! thank you for the nice picture</string>
+    <string name="str_jenny_jacket" translatable="false">How many years ago already!! Happy days because I was always with the members~</string>
 
 
     <string name="str_jenny_comment" translatable="false">Comment from Jenny: TEST</string>
 
-    <string name="str_rose_id" translatable="false">blackpinkrose</string>
-    <string name="str_rose_name" translatable="false">Rosé</string>
+    <string name="str_rose_id" translatable="false">Blackpinkrose</string>
+    <string name="str_rose_name" translatable="false">Rose</string>
     <string name="str_rose_des" translatable="false">Main Vocalist</string>
     <string name="str_rose_mbti" translatable="false">ENFP</string>
-    <string name="str_rose_feed" translatable="false">Enjoying the festival on a sunny day</string>
+    <string name="str_rose_feed_min" translatable="false">Nice and exciting festival</string>
+    <string name="str_rose_feed2" translatable="false">My love leather jacket~ Am I look pretty even with 6 pins in my hair? please say so</string>
+    <string name="str_rose_feed3" translatable="false">I\'ve always been looking for a higher place, but the most important value lies within me.</string>
+
 
 
     <string name="str_rose_comment" translatable="false">Comment from Rose: TEST</string>
 
-    <string name="str_lisa_id" translatable="false">blackpinklisa</string>
+    <string name="str_lisa_id" translatable="false">Blackpinklisa</string>
     <string name="str_lisa_name" translatable="false">Lisa</string>
     <string name="str_lisa_des" translatable="false">Main Dancer</string>
     <string name="str_lisa_mbti" translatable="false">ESFJ</string>
-    <string name="str_lisa_feed" translatable="false">Had an unforgettable night in Venice with amazing people</string>
+    <string name="str_lisa_feed_min" translatable="false">Had an unforgettable night in Venice with amazing people</string>
+    <string name="str_lisa_feed2" translatable="false">Enjoying the California sunshine</string>
+    <string name="str_lisa_feed3" translatable="false">Is Arno my lover~ best friend~?</string>
 
     <string name="str_lisa_comment" translatable="false">Comment from Lisa: TEST</string>
 
