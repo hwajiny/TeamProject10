@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="30dp">
+        android:layout_margin="30dp"
+        android:orientation="vertical">
 
 
         <ImageView
@@ -21,63 +20,76 @@
             android:layout_marginVertical="30dp"
             android:src="@drawable/logo3" />
 
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이름"
-            android:layout_gravity="left"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/editTextName"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="이름을 입력하세요."
-            android:textStyle="italic"
-            android:inputType="textPersonName"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아이디"
-            android:layout_gravity="left"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
-        <EditText
-            android:id="@+id/editTextId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="아이디를 입력하세요."
-            android:textStyle="italic"
-            android:inputType="text"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="비밀번호"
-            android:layout_gravity="left"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            />
-        <EditText
-            android:id="@+id/editTextPw"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호를 입력하세요."
-            android:layout_marginBottom="20dp"
-            android:textStyle="italic"
-            android:inputType="textPassword"/>
-        <Button
-            android:id="@+id/buttonLoginActivity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="회원가입"
-            android:textStyle="bold"
-            android:layout_marginVertical="20dp"
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="이름"
+                    android:textStyle="bold" />
 
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="이름을 입력하세요."
+                    android:inputType="textPersonName"
+                    android:textStyle="italic" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:text="아이디"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="아이디를 입력하세요."
+                    android:inputType="text"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:text="비밀번호"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextPw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="비밀번호를 입력하세요."
+                    android:inputType="textPassword"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/buttonLoginActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="회원가입"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
