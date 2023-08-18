@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             horizontalLayout.addView(layoutHorizontalFeedIcon)
 
             layoutHorizontalFeedIcon.setOnClickListener {
-                val i = Intent(this, DetailActivityJE::class.java).apply {
+                val i = Intent(this, DetailActivity::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                     putExtra("DATA", detailData)
                 }
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                 linearLayout.addView(layoutMainFeedItem)
 
                 layoutMainFeedItem.setOnClickListener {
-                    val i = Intent(this, DetailActivityJE::class.java).apply {
+                    val i = Intent(this, DetailActivity::class.java).apply {
                         addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                         putExtra("DATA", detailData)
                     }
