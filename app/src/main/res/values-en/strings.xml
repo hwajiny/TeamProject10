@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Blink</string>
-    <string name="str_not_login" translatable="false">please login</string>
+    <string name="str_not_login" translatable="false">Login</string>
     <string name="str_login" translatable="false">\nWelcome</string>
 
     <string name="str_jisu_id" translatable="false">jisu</string>
