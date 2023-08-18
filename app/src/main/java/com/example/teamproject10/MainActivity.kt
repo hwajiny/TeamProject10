@@ -104,7 +104,9 @@ class MainActivity : AppCompatActivity() {
                 comment.setText(feedData.comment)
 
                 //그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
-                linearLayout.addView(layoutMainFeedItem)
+//                linearLayout.addView(layoutMainFeedItem)
+                // 랜덤한 위치에 세로 피드 구역 추가
+                linearLayout.addRandomView(layoutMainFeedItem)
 
                 layoutMainFeedItem.setOnClickListener {
                     val i = Intent(this, DetailActivity::class.java).apply {
@@ -115,6 +117,16 @@ class MainActivity : AppCompatActivity() {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                 }
             }
+        }
+    }
+
+    // 랜덤한 위치에 뷰를 추가하는 확장 함수
+    private fun ViewGroup.addRandomView(child: ViewGroup) {
+        if (childCount > 0) {
+            val randomIndex = (0 until childCount).random()
+            addView(child, randomIndex)
+        } else {
+            addView(child)
         }
     }
 
