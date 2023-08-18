@@ -43,7 +43,9 @@
 
     <string name="str_lisa_comment" translatable="false">코멘트 리사 TEST</string>
 
-    <string name="my_page" translatable="false">이름: 김지수\n 생일:1월3일\nmbti:ISTP\n소속사:YG</string>
+    <string name="my_page" translatable="false">이름: 김지수\n생일:1월3일\nmbti:ISTP\n소속사:YG</string>
+    <string name="my_page_button" translatable="false">프로필 수정하기</string>
+    <string name="toast_text" translatable="false">지금은 프로필 수정하실 수 없습니다!</string>
 
     <string name="str_no_data" translatable="false">데이타가 없습니다.</string>
 
