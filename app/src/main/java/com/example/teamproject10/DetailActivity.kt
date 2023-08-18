@@ -17,7 +17,6 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        //메인화면에서 선택하면 아래 코드로 전달받습니다.
         var detail: DetailData? = intent.getParcelableExtra("DATA")
         if (detail == null) {
             Toast.makeText(this, R.string.str_no_data, Toast.LENGTH_SHORT).show()
@@ -32,7 +31,6 @@ class DetailActivity : AppCompatActivity() {
 
         val linearLayout = findViewById<LinearLayout>(R.id.layout_content)
 
-        // 피드 데이터를 반복해서 스크롤뷰에 추가
         detail.detailList.forEach { feedData ->
             val inflater = LayoutInflater.from(this)
             val layoutDetailFeedItem = inflater.inflate(R.layout.include_layout_feeditem, linearLayout, false) as ViewGroup
