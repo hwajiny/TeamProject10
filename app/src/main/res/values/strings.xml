@@ -3,7 +3,7 @@
     <string name="str_not_login" translatable="false">로그인 해주세요</string>
     <string name="str_login" translatable="false">님\n환영합니다</string>
     <!-- -->
-    <string name="str_jisu_id" translatable="false">Blackpinkjisu</string>
+    <string name="str_jisu_id" translatable="false">jisu</string>
     <string name="str_jisu_name" translatable="false">지수</string>
     <string name="str_jisu_des" translatable="false">리드보컬</string>
     <string name="str_jisu_mbti" translatable="false">ESTJ</string>
@@ -13,7 +13,7 @@
 
     <string name="str_jisu_comment" translatable="false">코멘트 지수 TEST</string>
 
-    <string name="str_jenny_id" translatable="false">Blackpinkjenny</string>
+    <string name="str_jenny_id" translatable="false">jenny</string>
     <string name="str_jenny_name" translatable="false">제니</string>
     <string name="str_jenny_des" translatable="false">메인래퍼</string>
     <string name="str_jenny_mbti" translatable="false">INFP</string>
@@ -23,7 +23,7 @@
 
     <string name="str_jenny_comment" translatable="false">코멘트 제니 TEST</string>
 
-    <string name="str_rose_id" translatable="false">Blackpinkrose</string>
+    <string name="str_rose_id" translatable="false">rose</string>
     <string name="str_rose_name" translatable="false">로제</string>
     <string name="str_rose_des" translatable="false">메인보컬</string>
     <string name="str_rose_mbti" translatable="false">ENFP</string>
@@ -33,7 +33,7 @@
 
     <string name="str_rose_comment" translatable="false">코멘트 로제 TEST</string>
 
-    <string name="str_lisa_id" translatable="false">Blackpinklisa</string>
+    <string name="str_lisa_id" translatable="false">lisa</string>
     <string name="str_lisa_name" translatable="false">리사</string>
     <string name="str_lisa_des" translatable="false">메인댄서</string>
     <string name="str_lisa_mbti" translatable="false">ESFJ</string>
