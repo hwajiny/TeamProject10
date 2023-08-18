@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.example.teamproject10.data.UserData
+import com.example.teamproject10.data.SignMember
 import com.example.teamproject10.data.mainDataList
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
             startForMypage.launch(i)
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         checkLogin()
@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
         //아래 forEach문을통해서 피드데이타 갯수만큼 반복하면서 addView를 통해서 뷰를 붙여준다.
         mainDataList.forEach { detailData ->
             /* 가로 프로필 이미지 구역 */
-            //반복해서 사용하는 layout_feeditem 레이아웃을 객체로 생성해서 변수에 할당한다.
             val layoutHorizontalFeedIcon =
                 inflater.inflate(R.layout.include_layout_feedicon, horizontalLayout, false)
             val icon1 = layoutHorizontalFeedIcon.findViewById<ImageView>(R.id.img_horizon1)
@@ -76,17 +75,21 @@ class MainActivity : AppCompatActivity() {
                     putExtra("DATA", detailData)
                 }
                 startForDetail.launch(i)
-                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }
 
             /* 세로 피드 구역 */
             detailData.detailList.forEach { feedData ->
                 //반복해서 사용하는 layout_feeditem 레이아웃을 객체로 생성해서 변수에 할당한다.
                 val layoutMainFeedItem =
-                    inflater.inflate(R.layout.include_layout_feeditem, linearLayout, false) as ViewGroup
+                    inflater.inflate(
+                        R.layout.include_layout_feeditem,
+                        linearLayout,
+                        false
+                    ) as ViewGroup
                 //위에서 가져온 레이아웃에 아래 위젯을 각각 찾아서 변수 할당 하고
                 val imgIcon = layoutMainFeedItem.findViewById<ImageView>(R.id.img_icon_feed1)
-                val tvIcon = layoutMainFeedItem.findViewById<TextView>(R.id.id_feed1)
+                val tvId = layoutMainFeedItem.findViewById<TextView>(R.id.id_feed1)
                 val imgFeed = layoutMainFeedItem.findViewById<ImageView>(R.id.img_feed1)
                 val tvFeed = layoutMainFeedItem.findViewById<TextView>(R.id.feed1_textView)
                 val idComment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment_id)
@@ -94,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
                 //데이타를 넣어준다.
                 imgIcon.setImageResource(detailData.profile.image)
-                tvIcon.setText(detailData.profile.id)
+                tvId.setText(detailData.profile.id)
                 imgFeed.setImageResource(feedData.image)
                 tvFeed.setText(feedData.feedDescription)
                 idComment.setText(detailData.profile.id)
@@ -109,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                         putExtra("DATA", detailData)
                     }
                     startForDetail.launch(i)
-                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                 }
             }
         }
@@ -118,14 +121,15 @@ class MainActivity : AppCompatActivity() {
     private fun checkLogin() {
         // 로그인 여부 체크 후 문구 반영
         val loginCheck = findViewById<TextView>(R.id.login_check)
-        if (UserData.id.isNotEmpty()) {
-            loginCheck.text = getString(R.string.str_login)
+        if (SignMember.currentUser != null) {
+            loginCheck.text = SignMember.currentUser?.name + getString(R.string.str_login)
         } else {
             loginCheck.text = getString(R.string.str_not_login)
         }
+
         loginCheck.setOnClickListener {
             //로그인 상태라면 마이페이지 or 로그인상태가 아니라면 로그인페이지
-            if (UserData.id.isNotEmpty()) {
+            if (SignMember.currentUser != null) {
                 val i = Intent(this, MyPageActivity::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 }
@@ -147,10 +151,8 @@ class MainActivity : AppCompatActivity() {
     private val startForLogin =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
-                val intent = result.data
                 checkLogin()
 
-                Log.d(TAG, "startForLoginResult")
             }
         }
 
@@ -186,8 +188,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        UserData.id = ""
-        UserData.pw = ""
+        // 앞의 4명(고정 블핑맴버들)을 남기고 나머지 요소를 제거
+        SignMember.signMemberList.subList(4, SignMember.signMemberList.size).clear()
+        SignMember.currentUser = null
     }
 
     override fun onBackPressed() {
