@@ -4,6 +4,7 @@
     <string name="str_login" translatable="false">님\n환영합니다</string>
     <string name="str_feed_more" translatable="false">더보기</string>
     <string name="str_feed_folding" translatable="false">접기</string>
+    <string name="str_valid_check_id" translatable="false">중복체크</string>
     <!-- -->
     <string name="str_jisu_id" translatable="false">jisu</string>
     <string name="str_jisu_name" translatable="false">지수</string>

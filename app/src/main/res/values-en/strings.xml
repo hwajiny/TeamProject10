@@ -5,6 +5,7 @@
     <string name="str_login" translatable="false">\nWelcome</string>
     <string name="str_feed_more" translatable="false">more</string>
     <string name="str_feed_folding" translatable="false">folding</string>
+    <string name="str_valid_check_id" translatable="false">valdation</string>
 
     <string name="str_jisu_id" translatable="false">jisu</string>
     <string name="str_jisu_name" translatable="false">Jisu</string>
@@ -15,7 +16,9 @@
     <string name="str_jisu_feed2" translatable="false">The weather here is a bit chilly. It must be hot in Korea, right? I already miss my homeland</string>
 
 
-    <string name="str_jisu_comment" translatable="false">Comment from Jisu: TEST</string>
+    <string name="str_jisu_comment1" translatable="false">Let"\'s accept it!!!</string>
+    <string name="str_jisu_comment2" translatable="false">Congratulations to Jisoo who is prettier than flowers~~~</string >
+    <string name="str_jisu_comment3" translatable="false">I want to come back soon and see you</string>
 
     <string name="str_jenny_id" translatable="false">jenny</string>
     <string name="str_jenny_name" translatable="false">Jenny</string>
@@ -26,7 +29,9 @@
     <string name="str_jenny_jacket" translatable="false">How many years ago already!! Happy days because I was always with the members~</string>
 
 
-    <string name="str_jenny_comment" translatable="false">Comment from Jenny: TEST</string>
+    <string name="str_jenny_comment1" translatable="false">BLACKPINK Forever~~~</string>
+    <string name="str_jenny_comment2" translatable="false">The pictorial is so cool</string>
+    <string name="str_jenny_comment3" translatable="false">Time goes by so fast</string>
 
     <string name="str_rose_id" translatable="false">rose</string>
     <string name="str_rose_name" translatable="false">Rose</string>
@@ -36,9 +41,9 @@
     <string name="str_rose_feed2" translatable="false">My love leather jacket~ Am I look pretty even with 6 pins in my hair? please say so</string>
     <string name="str_rose_feed3" translatable="false">I\'ve always been looking for a higher place, but the most important value lies within me.</string>
 
-
-
-    <string name="str_rose_comment" translatable="false">Comment from Rose: TEST</string>
+    <string name="str_rose_comment1" translatable="false">I want to go to the festival too</string>
+    <string name="str_rose_comment2" translatable="false">I like leather jackets too</string>
+    <string name="str_rose_comment3" translatable="false">Yes agree</string>
 
     <string name="str_lisa_id" translatable="false">lisa</string>
     <string name="str_lisa_name" translatable="false">Lisa</string>
@@ -48,7 +53,9 @@
     <string name="str_lisa_feed2" translatable="false">Enjoying the California sunshine</string>
     <string name="str_lisa_feed3" translatable="false">Is Arno my lover~ best friend~?</string>
 
-    <string name="str_lisa_comment" translatable="false">Comment from Lisa: TEST</string>
+    <string name="str_lisa_comment1" translatable="false">It was so nice</string>
+    <string name="str_lisa_comment2" translatable="false">I love Christ</string>
+    <string name="str_lisa_comment3" translatable="false">Vote for Lover!</string>
 
     <string name="str_no_data" translatable="false">No data available.</string>
 
