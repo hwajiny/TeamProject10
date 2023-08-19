@@ -168,8 +168,19 @@ class MainActivity : AppCompatActivity() {
 
                     // 더보기 클릭 이벤트
                     viewMoreTextView.setOnClickListener {
-                        contentTextView.maxLines = Int.MAX_VALUE
-                        viewMoreTextView.visibility = View.GONE
+                        // 조건문 더보기 클릭이면 접기버튼 세팅
+                        // 접기버튼 클릭이면 더보기 버튼 세팅
+                        var tv = (it as TextView)
+
+                        if(tv.text == getString(R.string.str_feed_more)) {
+                            contentTextView.maxLines = Int.MAX_VALUE
+                            tv.text = getString(R.string.str_feed_folding)
+                        }
+                        else {
+                            contentTextView.maxLines = 2
+                            tv.text = getString(R.string.str_feed_more)
+                        }
+
                     }
                 }
             }

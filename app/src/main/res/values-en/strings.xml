@@ -3,6 +3,8 @@
     <string name="app_name">Blink</string>
     <string name="str_not_login" translatable="false">Login</string>
     <string name="str_login" translatable="false">\nWelcome</string>
+    <string name="str_feed_more" translatable="false">more</string>
+    <string name="str_feed_folding" translatable="false">folding</string>
 
     <string name="str_jisu_id" translatable="false">jisu</string>
     <string name="str_jisu_name" translatable="false">Jisu</string>

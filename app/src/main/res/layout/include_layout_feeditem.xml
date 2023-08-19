@@ -58,7 +58,9 @@
         android:id="@+id/feed_textmore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="더보기"
+        android:text="@string/str_feed_more"
+        android:textColor="@color/neonpurple"
+        android:textStyle="bold"
         android:visibility="gone"/>
     <!-- 코맨트 부분 -->
 
