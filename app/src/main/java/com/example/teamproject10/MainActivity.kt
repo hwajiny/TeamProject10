@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
                 tvId.setText(detailData.profile.id)
                 imgFeed.setImageResource(feedData.image)
                 tvFeed.setText(feedData.feedDescription)
-                idComment.setText(detailData.profile.id)
+                idComment.text = feedData.comId
                 comment.setText(feedData.comment)
                 //더보기 함수 호출
                 setViewMore(tvFeed, tvMore)

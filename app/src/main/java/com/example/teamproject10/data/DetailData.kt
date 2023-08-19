@@ -20,7 +20,7 @@ data class ProfileData(var id: Int, var nameRes: Int, var descriptionRes: Int, v
  * 상세 데이타
  */
 @Parcelize
-data class FeedData(var image: Int, var feedDescription: Int, var comment: Int): Parcelable
+data class FeedData(var image: Int, var feedDescription: Int, var comment: Int, var comId: String): Parcelable
 
 
 /**
@@ -29,30 +29,30 @@ data class FeedData(var image: Int, var feedDescription: Int, var comment: Int):
 
 val jisuProfile = ProfileData(R.string.str_jisu_id, R.string.str_jisu_name, R.string.str_jisu_des, R.string.str_jisu_mbti, R.drawable.ic_jisu)
 val jisuFeed = ArrayList<FeedData>().apply {
-    add(FeedData(R.drawable.coachella, R.string.str_jisu_coachella, R.string.str_jisu_comment))
-    add(FeedData(R.drawable.jisufeed1, R.string.str_jisu_feed1, R.string.str_jisu_comment))
-    add(FeedData(R.drawable.jisufeed2, R.string.str_jisu_feed2, R.string.str_jisu_comment))
+    add(FeedData(R.drawable.coachella, R.string.str_jisu_coachella, R.string.str_jisu_comment1, "jenny"))
+    add(FeedData(R.drawable.jisufeed1, R.string.str_jisu_feed1, R.string.str_jisu_comment2, "khj"))
+    add(FeedData(R.drawable.jisufeed2, R.string.str_jisu_feed2, R.string.str_jisu_comment3, "jenny"))
 }
 
 val jennyProfile = ProfileData(R.string.str_jenny_id, R.string.str_jenny_name, R.string.str_jenny_des, R.string.str_jenny_mbti, R.drawable.ic_jenny)
 val jennyFeed = ArrayList<FeedData>().apply {
-    add(FeedData(R.drawable.jennyfeed1, R.string.str_jenny_feed1, R.string.str_jenny_comment))
-    add(FeedData(R.drawable.jennyfeed2, R.string.str_jenny_feed2, R.string.str_jenny_comment))
-    add(FeedData(R.drawable.jacket, R.string.str_jenny_jacket, R.string.str_jenny_comment))
+    add(FeedData(R.drawable.jennyfeed1, R.string.str_jenny_feed1, R.string.str_jenny_comment1, "rose"))
+    add(FeedData(R.drawable.jennyfeed2, R.string.str_jenny_feed2, R.string.str_jenny_comment2, "ywj"))
+    add(FeedData(R.drawable.jacket, R.string.str_jenny_jacket, R.string.str_jenny_comment3, "lisa"))
 }
 
 val roseProfile = ProfileData(R.string.str_rose_id, R.string.str_rose_name, R.string.str_rose_des, R.string.str_rose_mbti, R.drawable.ic_rose)
 val roseFeed = ArrayList<FeedData>().apply {
-    add(FeedData(R.drawable.rosefeed_min, R.string.str_rose_feed_min, R.string.str_rose_comment))
-    add(FeedData(R.drawable.rosefeed2, R.string.str_rose_feed2, R.string.str_rose_comment))
-    add(FeedData(R.drawable.rosefeed3, R.string.str_rose_feed3, R.string.str_rose_comment))
+    add(FeedData(R.drawable.rosefeed_min, R.string.str_rose_feed_min, R.string.str_rose_comment1, "sjs"))
+    add(FeedData(R.drawable.rosefeed2, R.string.str_rose_feed2, R.string.str_rose_comment2, "lcs"))
+    add(FeedData(R.drawable.rosefeed3, R.string.str_rose_feed3, R.string.str_rose_comment3, "jisu"))
 }
 
 val lisaProfile = ProfileData(R.string.str_lisa_id, R.string.str_lisa_name, R.string.str_lisa_des, R.string.str_lisa_des, R.drawable.ic_lisa)
 val lisaFeed = ArrayList<FeedData>().apply {
-    add(FeedData(R.drawable.lisafeed_min, R.string.str_lisa_feed_min, R.string.str_lisa_comment))
-    add(FeedData(R.drawable.lisafeed2, R.string.str_lisa_feed2, R.string.str_lisa_comment))
-    add(FeedData(R.drawable.lisafeed3, R.string.str_lisa_feed3, R.string.str_lisa_comment))
+    add(FeedData(R.drawable.lisafeed_min, R.string.str_lisa_feed_min, R.string.str_lisa_comment1, "krd"))
+    add(FeedData(R.drawable.lisafeed2, R.string.str_lisa_feed2, R.string.str_lisa_comment2, "korea"))
+    add(FeedData(R.drawable.lisafeed3, R.string.str_lisa_feed3, R.string.str_lisa_comment3, "spilbug"))
 }
 
 var mainDataList = ArrayList<DetailData>().apply {
