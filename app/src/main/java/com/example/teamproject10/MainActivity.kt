@@ -44,14 +44,15 @@ class MainActivity : AppCompatActivity() {
     private fun checkLogin() {
         // 로그인 여부 체크 후 문구 반영
         val loginCheck = findViewById<TextView>(R.id.login_check)
-        val imgLoginmain = findViewById<ImageView>(R.id.img_login_main)
 
         if (SignMember.currentUser != null) {
             loginCheck.text = SignMember.currentUser?.name + getString(R.string.str_login)
         } else {
             loginCheck.text = getString(R.string.str_not_login)
         }
-        loginCheck.setOnClickListener {
+
+        val imgLoginmain = findViewById<LinearLayout>(R.id.login_layout)
+        imgLoginmain.setOnClickListener  {
             //로그인 상태라면 마이페이지 or 로그인상태가 아니라면 로그인페이지
             if (SignMember.currentUser != null) {
                 val i = Intent(this, MyPageActivity::class.java).apply {
@@ -67,21 +68,7 @@ class MainActivity : AppCompatActivity() {
                 startForLogin.launch(i)
             }
         }
-        imgLoginmain.setOnClickListener {
-            if (SignMember.currentUser != null){
-                val i = Intent(this, MyPageActivity::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                    putExtra("DATA", getMydata())
-                }
-                startForMypage.launch(i)
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-            } else{
-                val i = Intent(this, LoginActivity::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                }
-                startForLogin.launch(i)
-            }
-        }
+
     }
 
     /**
