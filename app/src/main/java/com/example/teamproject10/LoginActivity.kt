@@ -34,16 +34,16 @@ class LoginActivity : AppCompatActivity() {
 
                 setResult(Activity.RESULT_OK, intent)
 
-                Toast.makeText(applicationContext, "로그인 성공", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.str_toast_login_success, Toast.LENGTH_SHORT).show()
                 finish()
             } else if (id.isNotEmpty() && pw.isEmpty()) {
-                Toast.makeText(applicationContext, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.str_toast_check_pw, Toast.LENGTH_SHORT).show()
             } else if (id.isEmpty() && pw.isNotEmpty()) {
-                Toast.makeText(applicationContext, "아이디를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.str_toast_check_id, Toast.LENGTH_SHORT).show()
             } else if (id.isEmpty() && pw.isEmpty()) {
-                Toast.makeText(applicationContext, "아이디/비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.str_toast_check_idpw, Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(applicationContext, "일치하는 회원정보가 없습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.str_toast_check_user, Toast.LENGTH_SHORT).show()
             }
         }
 

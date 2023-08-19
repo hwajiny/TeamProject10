@@ -1,9 +1,22 @@
 <resources>
     <string name="app_name">Blink</string>
     <string name="str_not_login" translatable="false">로그인</string>
+    <string name="str_name" translatable="false">이름</string>
+    <string name="str_id" translatable="false">아이디</string>
+    <string name="str_password" translatable="false">비밀번호</string>
+    <string name="str_signup" translatable="false">회원가입</string>
+    <string name="str_hint_name" translatable="false">이름을 입력하세요.</string>
+    <string name="str_hint_id" translatable="false">아이디를 입력하세요.</string>
+    <string name="str_hint_password" translatable="false">비밀번호를 입력하세요.</string>
     <string name="str_login" translatable="false">님\n환영합니다</string>
     <string name="str_feed_more" translatable="false">더보기</string>
     <string name="str_feed_folding" translatable="false">접기</string>
+    <string name="str_toast_check" translatable="false">입력되지 않은 정보가 있습니다</string>
+    <string name="str_toast_login_success" translatable="false">로그인성공</string>
+    <string name="str_toast_check_pw" translatable="false">비밀번호를 입력해주세요</string>
+    <string name="str_toast_check_id" translatable="false">아이디를 입력해주세요</string>
+    <string name="str_toast_check_idpw" translatable="false">아이디/비밀번호를 입력해주세요</string>
+    <string name="str_toast_check_user" translatable="false">일치하는 회원정보가 없습니다</string>
     <string name="str_valid_check_id" translatable="false">중복체크</string>
     <!-- -->
     <string name="str_jisu_id" translatable="false">jisu</string>
@@ -57,6 +70,7 @@
     <string name="my_page" translatable="false">이름: 김지수\n생일:1월3일\nmbti:ISTP\n소속사:YG</string>
     <string name="my_page_button" translatable="false">프로필 수정하기</string>
     <string name="toast_text" translatable="false">지금은 프로필 수정하실 수 없습니다!</string>
+
 
     <string name="str_no_data" translatable="false">데이타가 없습니다.</string>
 

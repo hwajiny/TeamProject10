@@ -34,7 +34,7 @@ class SignUpActivity : AppCompatActivity() {
                 setResult(RESULT_OK,intent)
                 finish()
             }else {
-                Toast.makeText(applicationContext,"입력되지 않은 정보가 있습니다.",Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,R.string.str_toast_check,Toast.LENGTH_SHORT).show()
             }
 
         }

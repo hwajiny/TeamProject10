@@ -2,9 +2,22 @@
 <resources>
     <string name="app_name">Blink</string>
     <string name="str_not_login" translatable="false">Login</string>
+    <string name="str_name" translatable="false">Name</string>
+    <string name="str_id" translatable="false">ID</string>
+    <string name="str_password" translatable="false">Password</string>
+    <string name="str_signup" translatable="false">SignUp</string>
+    <string name="str_hint_name" translatable="false">Enter your name</string>
+    <string name="str_hint_id" translatable="false">Enter your ID</string>
+    <string name="str_hint_password" translatable="false">Enter your password</string>
     <string name="str_login" translatable="false">\nWelcome</string>
     <string name="str_feed_more" translatable="false">more</string>
     <string name="str_feed_folding" translatable="false">folding</string>
+    <string name="str_toast_check" translatable="false">There is information that has not been entered</string>
+    <string name="str_toast_login_success" translatable="false">Login successful</string>
+    <string name="str_toast_check_pw" translatable="false">Please enter your password</string>
+    <string name="str_toast_check_id" translatable="false">Please enter your ID</string>
+    <string name="str_toast_check_idpw" translatable="false">ID/Password Please enter</string>
+    <string name="str_toast_check_user" translatable="false">No matching member information</string>
     <string name="str_valid_check_id" translatable="false">valdation</string>
 
     <string name="str_jisu_id" translatable="false">jisu</string>
@@ -17,7 +30,7 @@
 
 
     <string name="str_jisu_comment1" translatable="false">Let"\'s accept it!!!</string>
-    <string name="str_jisu_comment2" translatable="false">Congratulations to Jisoo who is prettier than flowers~~~</string >
+    <string name="str_jisu_comment2" translatable="false">Congratulations to Jisoo who is prettier than flowers~~~</string>
     <string name="str_jisu_comment3" translatable="false">I want to come back soon and see you</string>
 
     <string name="str_jenny_id" translatable="false">jenny</string>
