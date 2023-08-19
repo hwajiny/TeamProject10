@@ -50,8 +50,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="@string/str_lisa_feed_min" />
-
+        android:text="@string/str_lisa_feed_min"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/feed_textmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="더보기"
+        android:visibility="gone"/>
     <!-- 코맨트 부분 -->
 
     <!-- 경계선 -->

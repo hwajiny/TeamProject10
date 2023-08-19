@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -115,6 +116,7 @@ class MainActivity : AppCompatActivity() {
                 val tvId = layoutMainFeedItem.findViewById<TextView>(R.id.id_feed1)
                 val imgFeed = layoutMainFeedItem.findViewById<ImageView>(R.id.img_feed1)
                 val tvFeed = layoutMainFeedItem.findViewById<TextView>(R.id.feed1_textView)
+                val tvMore = layoutMainFeedItem.findViewById<TextView>(R.id.feed_textmore)
                 val idComment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment_id)
                 val comment = layoutMainFeedItem.findViewById<TextView>(R.id.tv_comment)
 
@@ -125,7 +127,8 @@ class MainActivity : AppCompatActivity() {
                 tvFeed.setText(feedData.feedDescription)
                 idComment.setText(detailData.profile.id)
                 comment.setText(feedData.comment)
-
+                //더보기 함수 호출
+                setViewMore(tvFeed, tvMore)
                 // 그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
 //                 linearLayout.addView(layoutMainFeedItem)
                 // 랜덤한 위치에 세로 피드 구역 추가
@@ -153,6 +156,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // 더보기 기능 구현
+    private fun setViewMore(contentTextView: TextView, viewMoreTextView: TextView) {
+        // getEllipsisCount()을 통한 더보기 표시 및 구현
+        contentTextView.post {
+            val lineCount = contentTextView.layout.lineCount
+            if (lineCount > 0) {
+                if (contentTextView.layout.getEllipsisCount(lineCount - 1) > 0) {
+                    // 더보기 표시
+                    viewMoreTextView.visibility = View.VISIBLE
+
+                    // 더보기 클릭 이벤트
+                    viewMoreTextView.setOnClickListener {
+                        contentTextView.maxLines = Int.MAX_VALUE
+                        viewMoreTextView.visibility = View.GONE
+                    }
+                }
+            }
+        }
+    }
 
     private fun getMydata(): DetailData? {
         val blackPink = mainDataList.subList(0, 4)
