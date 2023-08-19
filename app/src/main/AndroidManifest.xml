@@ -12,12 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamProject10"
         tools:targetApi="31">
-        <activity
-            android:name=".DetailActivityRO"
-            android:exported="false" />
-        <activity
-            android:name=".DetailActivityJI"
-            android:exported="false" />
+
         <activity
             android:name=".FloatingActivity"
             android:exported="false" />
@@ -25,7 +20,7 @@
             android:name=".MyPageActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivityJE"
+            android:name=".DetailActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -35,6 +30,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -49,16 +49,28 @@
         android:id="@+id/feed1_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:textSize="20sp"
-        android:text="@string/str_lisa_feed_min" />
+        android:text="@string/str_lisa_feed_min"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/feed_textmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/str_feed_more"
+        android:textColor="@color/neonpurple"
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <!-- 코맨트 부분 -->
-
-    <!-- 경계선 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginStart="6dp"
         android:layout_marginBottom="15dp">
 
         <TextView
@@ -74,6 +86,5 @@
             android:layout_marginStart="5dp"
             />
     </LinearLayout>
-
 
 </LinearLayout>
