@@ -1,7 +1,9 @@
 package com.example.teamproject10
 
 import android.app.Activity
+import android.app.Person
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +14,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.teamproject10.data.DetailData
 import com.example.teamproject10.data.SignMember
 import com.example.teamproject10.data.mainDataList
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -25,16 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         initDataAndEvent()
 
-        val imgLoginmain = findViewById<ImageView>(R.id.img_login_main)
-        //일단은 우측상단 아이콘을 누르면 마이페이지로 이동하도록 반영. 추후 수정됨
-        imgLoginmain.setOnClickListener {
-            val i = Intent(this, MyPageActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-            }
-            startForMypage.launch(i)
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-        }
-
         checkLogin()
 
         //플로팅 버튼을 누르면 플로팅 화면을 호출하는 코드
@@ -45,6 +38,49 @@ class MainActivity : AppCompatActivity() {
             }
             startForFloating.launch(i)
             Log.d(TAG, "startForFloating")
+        }
+    }
+
+    private fun checkLogin() {
+        // 로그인 여부 체크 후 문구 반영
+        val loginCheck = findViewById<TextView>(R.id.login_check)
+        val imgLoginmain = findViewById<ImageView>(R.id.img_login_main)
+
+        if (SignMember.currentUser != null) {
+            loginCheck.text = SignMember.currentUser?.name + getString(R.string.str_login)
+        } else {
+            loginCheck.text = getString(R.string.str_not_login)
+        }
+        loginCheck.setOnClickListener {
+            //로그인 상태라면 마이페이지 or 로그인상태가 아니라면 로그인페이지
+            if (SignMember.currentUser != null) {
+                val i = Intent(this, MyPageActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    putExtra("DATA", getMydata())
+                }
+                startForMypage.launch(i)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            } else {
+                val i = Intent(this, LoginActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                }
+                startForLogin.launch(i)
+            }
+        }
+        imgLoginmain.setOnClickListener {
+            if (SignMember.currentUser != null){
+                val i = Intent(this, MyPageActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    putExtra("DATA", getMydata())
+                }
+                startForMypage.launch(i)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            } else{
+                val i = Intent(this, LoginActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                }
+                startForLogin.launch(i)
+            }
         }
     }
 
@@ -103,8 +139,8 @@ class MainActivity : AppCompatActivity() {
                 idComment.setText(detailData.profile.id)
                 comment.setText(feedData.comment)
 
-                //그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
-//                linearLayout.addView(layoutMainFeedItem)
+                // 그리고 마지막으로 아래 코드로 위에서 생성한 레아아웃을 붙여준다.
+//                 linearLayout.addView(layoutMainFeedItem)
                 // 랜덤한 위치에 세로 피드 구역 추가
                 linearLayout.addRandomView(layoutMainFeedItem)
 
@@ -130,31 +166,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkLogin() {
-        // 로그인 여부 체크 후 문구 반영
-        val loginCheck = findViewById<TextView>(R.id.login_check)
-        if (SignMember.currentUser != null) {
-            loginCheck.text = SignMember.currentUser?.name + getString(R.string.str_login)
-        } else {
-            loginCheck.text = getString(R.string.str_not_login)
+
+    private fun getMydata(): DetailData? {
+        val blackPink = mainDataList.subList(0, 4)
+        val blackMemeber = blackPink.firstOrNull {
+            getString(it.profile.id) == SignMember.currentUser?.id
         }
-
-        loginCheck.setOnClickListener {
-            //로그인 상태라면 마이페이지 or 로그인상태가 아니라면 로그인페이지
-            if (SignMember.currentUser != null) {
-                val i = Intent(this, MyPageActivity::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                }
-                startForMypage.launch(i)
-
-            } else {
-                val i = Intent(this, LoginActivity::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                }
-                startForLogin.launch(i)
-            }
-
-        }
+        return blackMemeber
     }
 
     /**
