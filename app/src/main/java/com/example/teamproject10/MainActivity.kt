@@ -227,4 +227,8 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed()
         finish()
     }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+    }
 }
