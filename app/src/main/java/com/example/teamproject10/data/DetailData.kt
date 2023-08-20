@@ -48,7 +48,7 @@ val roseFeed = ArrayList<FeedData>().apply {
     add(FeedData(R.drawable.rosefeed3, R.string.str_rose_feed3, R.string.str_rose_comment3, "jisu"))
 }
 
-val lisaProfile = ProfileData(R.string.str_lisa_id, R.string.str_lisa_name, R.string.str_lisa_des, R.string.str_lisa_des, R.drawable.ic_lisa)
+val lisaProfile = ProfileData(R.string.str_lisa_id, R.string.str_lisa_name, R.string.str_lisa_des, R.string.str_lisa_mbti, R.drawable.ic_lisa)
 val lisaFeed = ArrayList<FeedData>().apply {
     add(FeedData(R.drawable.lisafeed_min, R.string.str_lisa_feed_min, R.string.str_lisa_comment1, "krd"))
     add(FeedData(R.drawable.lisafeed2, R.string.str_lisa_feed2, R.string.str_lisa_comment2, "korea"))

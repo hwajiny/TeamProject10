@@ -27,7 +27,12 @@ class DetailActivity : AppCompatActivity() {
         profileImage.setImageResource(detail.profile.image)
 
         val profileName = findViewById<TextView>(R.id.textView1)
-        profileName.setText(detail.profile.nameRes)
+        var des =
+                    getString(detail.profile.id) + "\n" +
+                    getString(detail.profile.nameRes) + "\n" +
+                    getString(R.string.mbti) + " : " + getString(detail.profile.mbtiRes) + "\n" +
+                    getString(detail.profile.descriptionRes)
+        profileName.text = des
 
         val linearLayout = findViewById<LinearLayout>(R.id.layout_content)
 
@@ -46,7 +51,7 @@ class DetailActivity : AppCompatActivity() {
             tvIcon.setText(detail.profile.id)
             imgFeed.setImageResource(feedData.image)
             tvFeed.setText(feedData.feedDescription)
-            idComment.setText(detail.profile.id)
+            idComment.text = feedData.comId
             comment.setText(feedData.comment)
 
             linearLayout.addView(layoutDetailFeedItem)
