@@ -19,6 +19,9 @@
     <string name="str_toast_check_idpw" translatable="false">ID/Password Please enter</string>
     <string name="str_toast_check_user" translatable="false">No matching member information</string>
     <string name="str_valid_check_id" translatable="false">valdation</string>
+    <string name="str_valid_check_please" translatable="false">Please check duplicate ID</string>
+    <string name="str_valid_check_existid" translatable="false">ID already exists</string>
+    <string name="str_valid_check_id_success" translatable="false">ID available</string>
 
     <string name="str_jisu_id" translatable="false">jisu</string>
     <string name="str_jisu_name" translatable="false">Jisu</string>

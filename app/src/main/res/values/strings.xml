@@ -18,6 +18,10 @@
     <string name="str_toast_check_idpw" translatable="false">아이디/비밀번호를 입력해주세요</string>
     <string name="str_toast_check_user" translatable="false">일치하는 회원정보가 없습니다</string>
     <string name="str_valid_check_id" translatable="false">중복체크</string>
+    <string name="str_valid_check_please" translatable="false">ID 중복체크를 해주세요</string>
+    <string name="str_valid_check_existid" translatable="false">ID가 이미 존재합니다</string>
+    <string name="str_valid_check_id_success" translatable="false">사용가능한 ID입니다</string>
+
     <!-- -->
     <string name="str_jisu_id" translatable="false">jisu</string>
     <string name="str_jisu_name" translatable="false">지수</string>
