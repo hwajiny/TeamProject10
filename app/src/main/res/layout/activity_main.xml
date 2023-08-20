@@ -13,9 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:clickable="true"
+        app:borderWidth="0dp"
+        android:backgroundTint="@color/alpha_hotpink"
+        app:rippleColor="@color/hotpink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        app:srcCompat="@drawable/baseline_music_note_24" />
 
     <LinearLayout
         android:id="@+id/title_layout"
