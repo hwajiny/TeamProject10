@@ -11,82 +11,97 @@
         android:layout_margin="30dp"
         android:orientation="vertical">
 
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginVertical="30dp"
-            android:src="@drawable/logo4" />
-
+            android:src="@drawable/logo3" />
 
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/contentScrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-            <!-- 스크롤뷰는 꼭 리니어레이아웃을 추가하고 시작 -->
             <LinearLayout
-                android:id="@+id/layout_login_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="@string/str_id"
-                    android:textStyle="bold"
-
-                    />
+                    android:text="@string/str_name"
+                    android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextLogId"
+                    android:id="@+id/editTextName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/str_hint_id"
-                    android:inputType="text"
+                    android:hint="@string/str_hint_name"
+                    android:inputType="textPersonName"
                     android:textStyle="italic" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/str_password"
-                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/str_id"
+                    android:textStyle="bold" />
 
-                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/editTextId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/str_hint_id"
+                        android:inputType="text"
+                        android:textStyle="italic" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_valid_id"
+                        android:text="@string/str_valid_check_id"
+                        android:layout_width="100dp"
+                        android:layout_height="42dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/str_password"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextPw"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
                     android:hint="@string/str_hint_password"
                     android:inputType="textPassword"
                     android:textStyle="italic" />
 
                 <Button
-                    android:id="@+id/buttonMainActivity"
+                    android:id="@+id/buttonLoginActivity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="20dp"
-                    android:text="@string/str_not_login"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/buttonSignUpActivity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="@string/str_signup"
                     android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-    </LinearLayout>
 
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

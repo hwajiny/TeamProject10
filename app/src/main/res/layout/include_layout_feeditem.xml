@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_item_feed1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,54 +9,82 @@
     <!-- 아이콘과 아이디 부분-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_icon_feed1"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="16dp" />
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="5dp"
+            app:civ_border_overlay="true"
+            app:civ_border_color="@color/purple"
+            app:civ_border_width="2dp"/>
 
         <TextView
             android:id="@+id/id_feed1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/str_lisa_id" />
+            android:layout_marginTop="11dp"
+            android:text="@string/str_lisa_id"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
     </LinearLayout>
 
     <!-- 피드 이미지 부분 -->
     <ImageView
         android:id="@+id/img_feed1"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:src="@drawable/lisafeed" />
+        android:layout_height="200dp"
+        android:src="@drawable/lisafeed_min"
+        android:background="@color/black"
+        android:scaleType="fitXY"
+        android:padding="10dp"
+        />
 
     <!-- 피드설명 부분 -->
     <TextView
         android:id="@+id/feed1_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/str_lisa_feed" />
+        android:layout_marginStart="6dp"
+        android:textSize="20sp"
+        android:text="@string/str_lisa_feed_min"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/feed_textmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/str_feed_more"
+        android:textColor="@color/neonpurple"
+        android:textStyle="bold"
+        android:visibility="gone"/>
 
     <!-- 코맨트 부분 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="15dp">
+
         <TextView
             android:id="@+id/tv_comment_id"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:textStyle="bold"/>
+
         <TextView
             android:id="@+id/tv_comment"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            />
     </LinearLayout>
 
-    <!-- 경계선 -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="#d3d3d3" />
 </LinearLayout>
