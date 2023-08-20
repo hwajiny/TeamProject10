@@ -75,4 +75,14 @@
 
     <string name="str_no_data" translatable="false">No data available.</string>
 
+    <string name="nameR_song" translatable="false">OnTheGround </string>
+    <string name="nameJ_song" translatable="false">SOLO </string>
+    <string name="nameL_song" translatable="false">MONEY  </string>
+    <string name="nameJi_song" translatable="false">Flower </string>
+    <string name="songInt" translatable="false">As a solo artist, she shows off her charms and shows off her climax
+The drop part gives you a new pleasure. </string>
+    <string name="songInt_J" translatable="false">The first single SOLO, presented by Jenny, a member of YGs leading girl group BLACKPINK,
+        creates a different atmosphere from the music she showed as BLACKPINK. </string>
+    <string name="songInt_L" translatable="false">It is a hip-hop song with a minimal and sophisticated sense. As a solo artist, he doubled his vivid and colorful charm. </string>
+    <string name="songInt_ji" translatable="false">The addictive dance song Flower, which has a unique sound base and minimal arrangement, is the title song with a dreamy atmosphere. </string>
 </resources>
