@@ -37,12 +37,12 @@ class FloatingActivity : AppCompatActivity() {
             } else {
                 mediaPlayer?.start()
             }
+        }
+        stopbtn.setOnClickListener{
+            mediaPlayer?.stop()
+            mediaPlayer = null
+        }
 
-            stopbtn.setOnClickListener{
-                mediaPlayer?.stop()
-                mediaPlayer = null
-            }
-    }
         //================================================
         playbtn2.setOnClickListener{
             if (mediaPlayer == null) {
@@ -57,11 +57,10 @@ class FloatingActivity : AppCompatActivity() {
             } else {
                 mediaPlayer?.start()
             }
-
-            stopbtn2.setOnClickListener{
-                mediaPlayer?.stop()
-                mediaPlayer = null
-            }
+        }
+        stopbtn2.setOnClickListener{
+            mediaPlayer?.stop()
+            mediaPlayer = null
         }
         //=================================================
         playbtn3.setOnClickListener{
@@ -77,12 +76,12 @@ class FloatingActivity : AppCompatActivity() {
             } else {
                 mediaPlayer?.start()
             }
-
-            stopbtn3.setOnClickListener{
-                mediaPlayer?.stop()
-                mediaPlayer = null
-            }
         }
+        stopbtn3.setOnClickListener{
+            mediaPlayer?.stop()
+            mediaPlayer = null
+        }
+
         //===================================================
         playbtn4.setOnClickListener{
             if (mediaPlayer == null) {
@@ -97,11 +96,10 @@ class FloatingActivity : AppCompatActivity() {
             } else {
                 mediaPlayer?.start()
             }
-
-            stopbtn4.setOnClickListener{
-                mediaPlayer?.stop()
-                mediaPlayer = null
-            }
         }
-}
+        stopbtn4.setOnClickListener{
+            mediaPlayer?.stop()
+            mediaPlayer = null
+        }
+    }
 }
